@@ -8,10 +8,11 @@ typedef struct _pr
 
 std::queue<int> Permutate::q = {};
 
-void Permutate::printAll (int length, std::vector <int> & list)
+void Permutate::printAll (size_t length, std::vector <int> & list)
 {
     int w_index = 0;
     std::vector<pr> pos_count;
+    length = std::min(length, list.size());
     std::vector<int> window = std::vector<int> (length, -1);
 
     for (int i = 0; i < length; i++)
@@ -41,7 +42,7 @@ void Permutate::printAll (int length, std::vector <int> & list)
         {
         	std::cout <<"( ";
             for (int index : window)
-            	std::cout << list[index] <<' ';
+            	std::cout << list[index] <<',';
             std::cout << ')' << std::endl;
             w_index--;
         }

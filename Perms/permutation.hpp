@@ -6,7 +6,7 @@ class Permutate
 {	private:
 		static std::queue<int> q;
 	public:
-		static void printAll(int length, std::vector<int> & list);
+		static void printAll(size_t length, std::vector<int> & list);
 		Permutate() = delete;
 };
 #endif /*_PERMUTATION_*/
